@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- This theme was built by Sunothemes, following Themes by Eris's coding tutorial at https://themesbyeris.tumblr.com/tutorial01 -->
+<!-- This theme was originally created around 2017 - 2018, and was reworked in 2022. -->
+<!-- Please do not MODIFY this theme's HTML or CLAIM IT AS YOUR OWN. -->
+<!--Customisation Options (users can change these)-->
+
+<meta name="color:Background" content="#eeeeee" />
+<meta name="color:Primary Colour" content="#613d12" />
+<meta name="color:Secondary Colour" content="#915c1c" />
+<meta name="color:Accent Colour" content="#9EC5E9" />
+<meta name="color:Accent Hover Colour" content="#ffffff"/>
+<meta name="color:Primary Text Colour" content="black"/>
+<meta name="color:Tag Text Colour" content="#ffffff"/>
+
+
+<meta name="text:Link 1 Title" content="" />
+<meta name="text:Link 1 URL" content="" />
+<meta name="text:Link 2 Title" content="" />
+<meta name="text:Link 2 URL" content="" />
+<meta name="text:Link 3 Title" content="" />
+<meta name="text:Link 3 URL" content="" />
+<meta name="text:Link 4 Title" content="" />
+<meta name="text:Link 4 URL" content="" />
+<meta name="text:Link 5 Title" content="" />
+<meta name="text:Link 5 URL" content="" />
+
+<meta name="font:Body" content="Open Sans" />
+
+<meta name="image:Background" content="" />
+<meta name="image:Sidebar" content="" />
+
+<meta name="if:Infinite Scroll" content="0">
+<meta name="if:Ribbon Enabled" content="0">
+<meta name="color:Ribbon Colour" content = "#E9605C" />
+
+
+<!--Tab-->
+
+<title>{Title}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<link rel="shortcut icon" href="{Favicon}" />
+
+<!--Custom Font-->
+
+<link href='https://fonts.googleapis.com/css?family=Tinos' rel='stylesheet' type='text/css'>
+
+
+
+<style type="text/css">
+
+/*Background*/
+
+body {
+	background-color: {color:Background};
+	font-family: {font:Body};
+	background-image: url({image:Background});
+	background-repeat: repeat;
+	background-attachment: fixed;
+	margin: 0;
+	word-wrap: break-word;
+	overflow-x: hidden;
+}
+
+/*Sidebar*/
+
+#sidebar {
+	background-color: white;
+	width: 300px;	
+	position: fixed;
+	top: 150px;
+	left: 18%;
+}
+
+/*Sidebar Title*/
+
+#sidebar .title {
+	font-family: 'Tinos', sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	padding: 10px;
+}
+
+#sidebar .title a {
+	color: {color:Primary Colour};
+	text-decoration: none;
+}
+
+#sidebar .title a:hover {
+	color: {color:Secondary Colour};
+}
+
+/*Sidebar Image*/
+
+#sidebar .image {
+	width: 260px;
+	height: auto;
+	position: relative;
+	left: 20px;
+}
+
+/*Sidebar Description*/
+
+#sidebar .description {
+	color: {color:Text Colour};
+	font-size: 12px;
+	text-align: justify;
+	padding: 10px 20px;
+	line-height:100%;
+}
+
+#sidebar .description a {
+	color: {color:Primary Colour};
+	text-decoration: none;
+}
+
+#sidebar .description a:hover {
+	color: {color:Secondary Colour};
+}
+
+/*Sidebar Links*/
+#sidebar .links-container {
+    padding: 20px 20px;
+}
+
+#sidebar .links {
+	background-color: {color:Primary Colour};
+    color: {color:Tag Text Colour};
+    text-decoration: none;
+    text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px 5px;
+    margin: 0px 3px 0px 0px;
+	width: 116px;
+}
+    
+#sidebar .links a {
+	text-decoration: none;
+}
+
+#sidebar .links:hover {
+	background-color: {color:Secondary Colour};
+}
+
+#sidebar .links:nth-child(even):hover {
+    background-color: {color:Accent Colour};
+    color: {color:Accent Highlight Colour};
+}
+
+/* Sidebar Ribbon Detail */
+#ribbon {
+    position: fixed;
+    margin-left: 20px;
+    height: 30px; 
+    border-right: 20px solid;
+    border-left: 20px solid;
+    border-color: {color:Ribbon Colour};
+    border-bottom: 30px solid transparent;
+}
+
+/***************************/
+
+/*Main Content (Posts)*/
+	
+#content {
+    width: 560px;
+    margin: 60px 0 60px 47%;
+    padding: 20px 0;
+    color: black;
+}
+
+#content a {
+    color: {color:Primary Colour};
+    text-decoration: none;
+}
+
+#content a:hover {
+    color: {color:Secondary Colour};
+}
+
+#content blockquote {
+    border-left: solid 2px black;
+    margin: 0;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+#content #posts {
+    background-color: white;
+    width: 500px;
+    margin: 0 auto 10px;
+    padding: 10px;
+    border: 20px solid rgba(255, 255, 255, 0.4);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+#content #posts .title {
+    font-size: 22px;
+}
+
+#content #posts .text {
+    font-size:12px;
+}
+
+/*Permalink*/
+
+#content #posts #permalink {
+    font-size:11px;
+    margin-top:10px;
+}
+
+/*Tags*/
+
+#content #posts #tags {
+    font-size:11px;
+    margin: 15px 0px 0px 0px;
+}
+
+#content #posts #tags .comma:last-child {
+    display: none;
+}
+
+#content #posts #tags .tag {
+    background-color: {color:Primary Colour};
+    color: {color:Tag Text Colour};
+    padding: 5px 5px;
+    margin: 0px 5px 0px 0px;
+}
+
+#content #posts #tags .tag:hover {
+	background-color: {color:Secondary Colour};
+}
+
+/*Note Container*/
+
+#content #notecontainer {
+    margin: 20px auto;
+    width: 500px;
+    font-size: 11px;
+}
+
+#content #notecontainer ol.notes {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#content #notecontainer img.avatar {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+/*Pagination*/
+
+#pagination .next {
+   width: 560px;
+   margin: 30px 493px; 
+}
+
+#pagination .prev {
+    width: 560px;
+    margin: 30px 0px; 
+}
+
+#pagination .button {
+    color: {color:Primary Colour};
+    text-decoration: none;
+    font-family: 'Tinos', sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+width: 10px; /** width of total scrollbar **/
+background: #ffffff; /** background of scrollbar **/
+}
+
+::-webkit-scrollbar-thumb {
+background: {color:Accent Colour}; /** color of the moving part **/
+}
+
+/*Custom CSS*/
+
+{CustomCSS}	
+
+</style>
+
+<!--Infinite Scroll-->
+
+{block:IfInfiniteScroll}
+<script src="https://matthewrayfield.github.io/tumblr-infinite-scrolling/infinitescrolling.js"></script>
+{/block:IfInfiniteScroll}
+
+</head>
+<body>
+
+<!--Sidebar-->
+
+<div id="sidebar">
+<div class="title"><a href="/">{Title}</a></div>
+<img class="image" src="{image:Sidebar}" />
+<div class="description">{Description}</div>
+
+<div class="links-container">
+<a href="/" class="links">HOME</a>
+{block:AskEnabled}<a href="/ask" class="links">ASK</a>{/block:AskEnabled}
+{block:SubmissionsEnabled}<a href="/submit" class="links">{SubmitLabel}</div></a>{/block:SubmissionsEnabled}
+{block:ifLink1URL}<a href={text:Link 1 URL} class="links">{text:Link 1 Title}</a>{/block:ifLink1URL}
+{block:ifLink2URL}<a href={text:Link 2 URL} class="links">{text:Link 2 Title}</a>{/block:ifLink2URL}
+{block:ifLink3URL}<a href={text:Link 3 URL} class="links">{text:Link 3 Title}</a>{/block:ifLink3URL}
+{block:ifLink4URL}<a href={text:Link 4 URL} class="links">{text:Link 4 Title}</a>{/block:ifLink4URL}
+{block:ifLink5URL}<a href={text:Link 5 URL} class="links">{text:Link 5 Title}</a>{/block:ifLink5URL}
+</div>
+
+{block:IfRibbonEnabled}
+<div id="ribbon"></div>
+{/block:IfRibbonEnabled}
+
+</div> <!--sidebar-->
+
+<!--------------------------->
+
+<!--Main Content (Posts)-->
+
+<div id="content">
+<div class="autopagerize_page_element">
+{block:Posts}
+<div id="posts">
+<div id="border">
+{block:Photo}
+{LinkOpenTag}<img src="{PhotoURL-500}" />{LinkCloseTag}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:Photo}
+</div>
+{block:Photoset}
+{Photoset-500}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:Photoset}
+
+{block:Video}
+{Video-500}
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:Video}
+
+{block:Audio}
+{AudioPlayerBlack}
+<div class="text">~ {PlayCountWithLabel}</div>
+{block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+{/block:Audio}
+
+{block:Quote}
+<div class="title">“{Quote}”</div>
+{block:Source}<div class="text"><br>~ {Source}</div>{/block:Source}
+{/block:Quote}
+
+{block:Text}
+{block:Title}<div class="title">{Title}</div>{/block:Title}
+<div class="text">{Body}</div>
+{/block:Text}
+
+{block:Answer}
+<div class="title">{Question}</div>
+<div class="text">~ {Asker}</div>
+<div class="text">{Answer}</div>
+{block:Answer}
+
+{block:Chat}
+{block:Title}<div class="title">{Title}</div>{/block:Title}
+<div class="text">
+{block:Lines}
+{block:Label}<strong>{Label}</strong>{/block:Label} {Line}<br />
+{/block:Lines}
+</div> <!--text-->
+{/block:Chat}
+
+{block:Link}
+<div class="title"><a href="{URL}">{Name}</a></div>
+{block:Description}
+<div class="text">{Description}</div>
+{/block:Description}
+{/block:Link}
+
+<!--------------------------->
+
+<!-- Permalink -->
+
+<div id="permalink">
+<a href="{Permalink}">
+{block:Date}{lang:Posted TimeAgo}{/block:Date}
+{block:NoteCount} with {NoteCountWithLabel}{/block:NoteCount}
+</a>
+</div> <!--permalink-->
+
+<!-- Tags -->
+
+{block:HasTags}<div id="tags">
+{block:Tags}<a href="{TagURL}" class="tag">#{Tag}</a><span class="comma"> </span>{/block:Tags}
+</div> <!--tags-->
+{/block:HasTags}
+
+</div> <!--posts-->
+
+<!-- Notes Container -->
+
+{block:PostNotes}
+<div id="notecontainer">{PostNotes}</div>
+{/block:PostNotes}
+
+
+{/block:Posts}
+
+<!-- Pagination -->
+{block:IfNotInfiniteScroll}
+<div id="pagination">
+<div class="prev">
+{block:PreviousPage}<a href="{PreviousPage}" class="button">« Previous</a>{/block:PreviousPage}
+</div>
+<div class="next">
+{block:NextPage}<a href="{NextPage}" class="button">Next »</a>{/block:NextPage}
+</div>
+</div>
+{/block:IfNotInfiniteScroll}
+
+</div> <!--autopagerize_page_element-->
+</div> <!--content-->
+
+</body>
+</html>
